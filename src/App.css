@@ -1,0 +1,181 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+body {
+  font-family: Inter, sans-serif;
+  background: #DDD3CD;
+  margin: 0;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+  
+}
+
+.Header > a {
+  text-decoration: none;
+  color: black;
+}
+
+.Header > a > p {
+  font-weight: 900;
+  font-size: 1.5rem;
+  font-stretch: expanded;
+}
+
+.NavBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  font-size: 0.9rem;
+}
+
+.NavBar > a {
+  text-decoration: none;
+  color: black;
+}
+
+.VanMain {
+  width: 100%;
+  height: 580px;
+  border-radius: 0px;
+}
+
+.VanMain >img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  position: absolute;
+  border-radius: inherit;
+}
+
+.HomeDetails {
+  color: white;
+  width: inherit;
+  height: inherit;
+  position: relative;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 14.06%, #1E1E1E 130%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.HomeDetails > h1 {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.HomeDetails > p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.HomeDetails > button {
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  width: 50%;
+  height: 50px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ED671A;
+  margin-top: 30px;
+}
+
+.Footer {
+  width: 100%;
+  background-color: #1C1A19;
+  text-align: center;
+  padding: 10px 0;
+  position:fixed;
+  bottom: 0;
+  color: white;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+}
+
+.About{
+  width: 100%;
+  height: 350px;
+  border-radius: 0px;
+}
+
+.About > img {
+  width: inherit;
+  height: 300px;
+  object-fit: cover;
+  object-position: bottom right;
+}
+
+.AboutContent {
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 100%;
+}
+
+.AboutContent > section {
+  height: 130px;
+  padding: 20px 40px 0px 40px;
+  background: #FFA774;
+  border-radius: 5px;
+}
+
+.AboutContent > section > button {
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: white;
+  background: black;
+  cursor: pointer;
+}
