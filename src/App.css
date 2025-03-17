@@ -41,10 +41,17 @@
   color: #888;
 } */
 
+
 body {
   font-family: Inter, sans-serif;
-  background: #DDD3CD;
+  background: #FFDECA;
+  -ms-overflow-style: none;
   margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 .Header {
@@ -56,7 +63,7 @@ body {
   
 }
 
-.Header > a {
+.Header  a {
   text-decoration: none;
   color: black;
 }
@@ -64,7 +71,6 @@ body {
 .Header > a > p {
   font-weight: 900;
   font-size: 1.5rem;
-  font-stretch: expanded;
 }
 
 .NavBar {
@@ -75,9 +81,10 @@ body {
   font-size: 0.9rem;
 }
 
-.NavBar > a {
-  text-decoration: none;
-  color: black;
+a.MainLink {
+  font-weight: bold;
+  text-decoration:underline;
+  color:#161616;
 }
 
 .VanMain {
@@ -132,21 +139,27 @@ body {
   margin-top: 30px;
 }
 
-.Footer {
-  width: 100%;
+footer {
   background-color: #1C1A19;
-  text-align: center;
-  padding: 10px 0;
-  position:fixed;
-  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 74px;
   color: white;
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
+  margin-top: auto;
+}
+
+.siteWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .About{
   width: 100%;
-  height: 350px;
   border-radius: 0px;
 }
 
@@ -158,9 +171,7 @@ body {
 }
 
 .AboutContent {
-  margin-left: 40px;
-  margin-right: 40px;
-  height: 100%;
+  margin: 0px 50px 20px 50px;
 }
 
 .AboutContent > section {
@@ -178,4 +189,365 @@ body {
   color: white;
   background: black;
   cursor: pointer;
+}
+
+.VanContainer{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+}
+
+.vanFilterLink {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.vanFilterLink > a {
+  text-decoration: none;
+  color: black;
+}
+
+.VanList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 50%;
+  gap: 50px;
+  row-gap: 80px;
+}
+
+.VanList > a {
+  text-decoration: none;
+}
+
+.Vans > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.VanSDetails {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.VanSDetails > p{
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+}
+
+.Vans > span{
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  color:white;
+  text-transform: capitalize;
+}
+
+.VanDetails {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 100px;
+}
+
+.VanDetails > span{
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  color:white;
+  text-transform: capitalize;
+}
+
+.VanDetails > img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.VanPrice {
+  font-size: 1.5rem;
+}
+
+.VanPrice > span{
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.VanDetails > button {
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  width: 100%;
+  height: 50px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ED671A;
+  margin-top: 30px;
+}
+
+.NavBarHost {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-size: 0.9rem;
+  margin-left: 50px;
+  margin-top: 5 0px;
+}
+
+.NavBarHost > a {
+  text-decoration: none;
+  color: black;
+}
+
+.HostVans {
+  
+  margin: 50px 50px 20px 50px;
+}
+
+.HostVans > a{
+  text-decoration: none;
+  color: black;
+}
+
+.HostVansList {
+  display: flex;  
+  align-items: center;
+  gap:20px;
+  background: white;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.HostVansList > img {
+  height: 200px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+.HostVanDetails {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  
+}
+
+.HostVanShortDetails {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.HostVanShortDetails > img{
+  height: 300px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.HostVanDetailsType{
+  font-size: 15px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  color:white;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.HostVanPrice{
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.HostVaninnerDetailsLabel {
+  font-size: 0.9rem;
+  
+}
+
+.HostVaninnerDetailsLabel > p > span{
+  font-weight: bold;
+}
+
+.HostVanShortDetailsLinks {
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  gap:20px;
+  font-size: 0.9rem;
+}
+
+.HostVanShortDetailsLinks a {
+  text-decoration: none;
+  color: black;
+}
+
+a.HostActiveLink {
+  font-weight: bold;
+  text-decoration:underline;
+  color:#161616;
+}
+
+.back-to-all-vans {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.back-to-all-vans > a {
+  color: black;
+  font-size: 0.9rem;
+}
+
+.HostVaninnerDetailPhotos > img {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.btnRugged, .btnSimple, .btnLuxury{
+  padding: 5px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #FFCCAD;
+}
+
+.btnClearFilter {
+  border: none;
+  background: inherit;
+  text-decoration: underline;
+}
+
+.btnRuggedActive{
+  padding: 5px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #035103;
+  color: white;
+}
+
+.btnSimpleActive{
+  padding: 5px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #FC6006;
+  color: white;
+}
+
+.btnLuxuryActive{
+  padding: 5px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+
+
+.btnRugged:hover{
+  background: #035103;
+  color: white;
+}
+
+.btnSimple:hover{
+  background: #FC6006;
+  color: white;
+}
+
+.btnLuxury:hover{
+  background: black;
+  color: white;
+}
+
+.btnClearFilter:hover{
+  font-size: 1rem;
+}
+
+.pageNotFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.pageNotFound > a{
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  width: 400px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.signin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.signinForm{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.email {
+  width: 500px;
+  padding: 10px 20px;
+  border-radius: 6px 6px 0px 0px;
+  border: 0.01rem solid #7C7775;
+}
+
+.pass {
+  width: 500px;
+  padding: 10px 20px;
+  border-radius: 0px 0px 6px 6px;
+  border: 0.01rem solid #7C7775;
+}
+
+.signinForm > button {
+  margin: 30px;
+  width: 500px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  color: white;
+  background: #FF792B;
+  cursor: pointer;
+}
+
+.signinForm > button:disabled {
+  margin: 30px;
+  width: 500px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  color: rgb(83, 81, 81);
+  background: #8a8887;
 }
